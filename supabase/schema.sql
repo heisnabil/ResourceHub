@@ -1,0 +1,10 @@
+-- ═══════════════════════════════════════════════════════════════════
+-- ResourceHub — run this ONCE in Supabase SQL Editor
+-- https://supabase.com/dashboard/project/hrxghlenxbymmgfcsjmp/sql/new
+--
+-- 1. Open the link above
+-- 2. Copy ALL of: supabase/migrations/001_production_schema.sql
+-- 3. Paste into the editor and click Run
+-- 4. (Optional) Make yourself admin — replace email:
+--    UPDATE public.profiles SET role = 'admin' WHERE email = 'you@gmail.com';
+-- ═══════════════════════════════════════════════════════════════════
