@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/logo.svg" alt="ResourceHub logo" width="72" height="72" />
+  <img src="https://raw.githubusercontent.com/heisnabil/ResourceHub/main/docs/assets/logo.svg" alt="ResourceHub logo" width="72" height="72" />
   <br />
   <strong>ResourceHub</strong>
 </p>
@@ -11,10 +11,10 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/dashboard.png" alt="ResourceHub dashboard" width="720" />
+  <img src="https://raw.githubusercontent.com/heisnabil/ResourceHub/main/docs/assets/dashboard.png" alt="ResourceHub dashboard" width="720" />
 </p>
 
-**Live:** https://infipark.vercel.app
+**Live:** https://resource-hub-fawn.vercel.app
 
 ---
 
@@ -31,9 +31,9 @@
 
 | Role | How they sign in | What they can do |
 |------|------------------|------------------|
-| **Employee** | [Login](https://infipark.vercel.app/login) — Google or email | View inventory, submit requests, see own profile |
+| **Employee** | [Login](https://resource-hub-fawn.vercel.app/login) — Google or email | View inventory, submit requests, see own profile |
 | **Manager** | Same as employee (role set by admin) | Approve/reject requests, view reports |
-| **Admin** | [Admin login](https://infipark.vercel.app/admin/login) — email + password only | Add/edit inventory, manage users, full access |
+| **Admin** | [Admin login](https://resource-hub-fawn.vercel.app/admin/login) — email + password only | Add/edit inventory, manage users, full access |
 
 > Admins must use **Admin login**, not the normal employee login.  
 > Only emails listed in `ADMIN_EMAILS` can be admins.
@@ -45,8 +45,8 @@
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/heisnabil/infipark.git
-cd infipark
+git clone https://github.com/heisnabil/ResourceHub.git
+cd ResourceHub
 npm install
 ```
 
@@ -99,9 +99,9 @@ In Supabase → **Authentication → Google** — enable provider.
 Add redirect URLs:
 
 - `http://localhost:3000/auth/callback`
-- `https://infipark.vercel.app/auth/callback` (production)
+- `https://resource-hub-fawn.vercel.app/auth/callback` (production)
 
-Set **Site URL** to your production domain in Supabase.
+Set **Site URL** to `https://resource-hub-fawn.vercel.app` in Supabase.
 
 ---
 
@@ -120,10 +120,10 @@ UPDATE public.profiles SET role = 'manager' WHERE email = 'manager@company.com';
 
 ## Deploy on Vercel
 
-1. Import repo on [vercel.com](https://vercel.com) (root folder: `infipark`)
-2. Add the same env vars as `.env.local` (`NEXT_PUBLIC_SITE_URL=https://infipark.vercel.app`)
-3. Deploy → run `npm run admin:create` locally against production Supabase
-4. Supabase **Site URL** + redirect: `https://infipark.vercel.app/auth/callback`
+1. Import [ResourceHub](https://github.com/heisnabil/ResourceHub) on [vercel.com](https://vercel.com)
+2. Add env vars from `.env.local` — set `NEXT_PUBLIC_SITE_URL=https://resource-hub-fawn.vercel.app`
+3. Deploy → run `npm run admin:create` against production Supabase
+4. Supabase **Site URL** + redirect: `https://resource-hub-fawn.vercel.app/auth/callback`
 5. Google OAuth redirect: `https://YOUR-PROJECT.supabase.co/auth/v1/callback`
 
 ---

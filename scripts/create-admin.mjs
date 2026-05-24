@@ -2,7 +2,7 @@
  * Create or reset the admin user (safe to run multiple times).
  * Requires .env.local: ADMIN_EMAIL, ADMIN_PASSWORD, SUPABASE_SERVICE_ROLE_KEY, NEXT_PUBLIC_SUPABASE_URL
  *
- * Use the SAME Supabase project as Vercel production before testing https://infipark.vercel.app/admin/login
+ * Use the SAME Supabase project as Vercel production before testing https://resource-hub-fawn.vercel.app/admin/login
  */
 import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -124,6 +124,6 @@ console.log('  Supabase:', url)
 console.log('  Email:   ', email)
 console.log('  Password: (from ADMIN_PASSWORD in .env.local)')
 console.log('\nLocal:      http://localhost:3000/admin/login')
-console.log('Production: https://infipark.vercel.app/admin/login')
+console.log('Production: https://resource-hub-fawn.vercel.app/admin/login')
 console.log('\nVercel must have the same ADMIN_EMAILS value:')
 console.log(`  ADMIN_EMAILS=${email}`)
